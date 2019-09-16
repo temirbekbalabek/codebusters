@@ -1,0 +1,223 @@
+<html>
+    <head>
+        <link rel = "stylesheet"
+              type = "text/css"
+              href = "style.css" />
+        <script type="text/javascript" src="project1.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="navbar" id="navbar">
+                <img src="Frame%202.png" alt="name of the cinema" class="navbar__name-of-cinema" id="navbar__name-of-cinema">
+                <div class="dropdown" id="dropdown">
+                    <button class="navbar__cities">
+                        <img src="map-marker-alt.png" alt="" class="navbar__geolacation-icon">
+                        <span>Алматы</span>
+                        <a class="strelka1"></a>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Нур-Султан</a>
+                        <a href="#">Алматы</a>
+                        <a href="#">Шымкент</a>
+                        <a href="#">Актау</a>
+                        <a href="#">Актобе</a>
+                        <a href="#">Атырау</a>
+                        <a href="#">Караганда</a>
+                        <a href="#">Кызылорда</a>
+                        <a href="#">Уральск</a>
+                    </div>
+                </div>
+                <ul id="group1">
+                    <li id="navbar__schedule" style="margin-left: 0;" onclick="changeMenu('Расписание')">Расписание</li>
+                    <li id="navbar__soon" onclick="changeMenu('Скоро')">Скоро</li>
+                    <li id="navbar__foods" onclick="changeMenu('Еда и напитки')">Еда и напитки</li>
+                    <li id="navbar__my-kinopark" onclick="changeMenu('Мой Kinopark')">Мой Kinopark</li>
+                </ul>
+                <div class="vhod">
+                    Вход/Регистрация
+                </div>
+                <div class="dropdown-lan">
+                    <button class="dropdown-button">
+                        <span>Рус</span>
+                        <a class="strelka2"></a>
+                    </button>
+                    <div class="dropdown-content-lan">
+                        <a href="#">Казакша</a>
+                        <a href="#">Русский</a>
+                        <a href="#">Qazaqsha</a>
+                        <a href="#">English</a>
+                    </div>
+                </div>
+                <!--mobile-->
+                <div class="bar" id="bar" onclick="openBar()"></div>
+            </div>
+            <div class="mega-menu" id="mega-menu">
+                <div class="schedule" id="schedule">
+                    <div class="films">
+                        <a class="films__first-word">Фильмы</a>
+                        <a>Сегодня в кино</a>
+                        <a>Предпродажи</a>
+                        <a class="imax">Фильмы в
+                            <span>
+                                <img src="i.png">
+                                <img src="m.png">
+                                <img src="a.png">
+                                <img src="x.png">
+                            </span>
+<!--                            <span style="font-size: 5px; margin-left: 0; margin-top: 2px; position: absolute">®</span>-->
+                        </a>
+                    </div>
+                    <div class="exclusive" id="exclusive">
+                        <a style="font-weight: bold">Эксклюзив</a><br>
+                        <a>Театр в кино</a>
+                        <a>Original version</a>
+                        <a>Концерты и фестивали</a>
+                        <a>Документальное кино</a>
+
+                    </div>
+                    <div class="line" id="line"></div>
+                    <a style="font-weight: bold; float: left; margin-left: 7%;">
+                        Сегодня в кино
+                    </a>
+                    <div style="float: left; margin-left: 18%;">
+                        Все сеансы →
+                    </div>
+                    <div class="films-for-today">
+                        <figure>
+                            <p><img src="image%202.jpg"></p>
+                            <figcaption>Король лев</figcaption>
+                        </figure>
+                        <figure>
+                            <p><img src="image%202.png"></p>
+                            <figcaption>Та еще парочка</figcaption>
+                        </figure>
+                        <figure>
+                            <p><img src="image%203.png"></p>
+                            <figcaption>История игрушек</figcaption>
+                        </figure>
+                        <figure>
+                            <p><img src="image%204.png"></p>
+                            <figcaption>За мечтой</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="soon" id="soon">
+                    <a class="soon__first-text">Скоро на экранах Kinopark и Kinoplexx</a>
+                    <a class="soon__second-text">Смотреть все предстоящие фильмы →</a>
+                    <div class="films-soon">
+                        <figure>
+                            <p><span class="pre-sale">Предпродажа</span>
+                                <img class="rectangle" src="Rectangle.png">
+                                <span class="age">16+</span>
+                                <span class="films-soon__date">с 25.07.2019</span>
+                                <img src="image%202.1.png" class="films-soon__img"></p>
+                            <figcaption>Паваротти</figcaption>
+                        </figure>
+                        <figure>
+                            <p><span class="pre-sale">Предпродажа</span>
+                                <img class="rectangle" src="Rectangle.png">
+                                <span class="age">16+</span>
+                                <span class="films-soon__date">с 18.07.2019</span>
+                                <img src="image%202.2.png" class="films-soon__img"></p>
+                            <figcaption>Видок: Охотник на призраков</figcaption>
+                        </figure>
+                        <figure>
+                            <p>
+                                <img class="rectangle" src="Rectangle.png">
+                                <span class="age">6+</span>
+                                <span class="films-soon__date">с 25.07.2019</span>
+                                <img src="image%202.3.png" class="films-soon__img">
+                            </p>
+                            <figcaption>Мой друг робот</figcaption>
+                        </figure>
+                        <figure>
+                            <p>
+                                <img class="rectangle" src="Rectangle.png">
+                                <span class="age">6+</span>
+                                <span class="films-soon__date">с 25.07.2019</span>
+                                <img src="image%202.4.png" class="films-soon__img">
+                            </p>
+                            <figcaption>Приключения Реми</figcaption>
+                        </figure>
+                        <figure>
+                            <p>
+                                <img class="rectangle" src="Rectangle.png">
+                                <span class="age">12+</span>
+                                <span class="films-soon__date">с 25.07.2019</span>
+                                <img src="image%202.5.png" class="films-soon__img">
+                            </p>
+                            <figcaption>Шаг вперед 6: Год танцев</figcaption>
+                        </figure>
+                        <figure>
+                            <p>
+                                <img class="rectangle" src="Rectangle.png">
+                                <span class="age">16+</span>
+                                <span class="films-soon__date">с 31.07.2019</span>
+                                <img src="image%202.6.png" class="films-soon__img">
+                            </p>
+                            <figcaption>Все мои сыновья (Спе...</figcaption>
+                        </figure>
+                        <figure>
+                            <p>
+                                <img class="rectangle" src="Rectangle.png">
+                                <span class="age">18+</span>
+                                <span class="films-soon__date">с 01.08.2019</span>
+                                <img src="image%202.7.png" class="films-soon__img">
+                            </p>
+                            <figcaption>Песнь Дьявола</figcaption>
+                        </figure>
+                        <figure>
+                            <p>
+                                <img class="rectangle" src="Rectangle.png">
+                                <span class="age">6+</span>
+                                <span class="films-soon__date">с 01.08.2019</span>
+                                <img src="image%202.8.png" class="films-soon__img">
+                            </p>
+                            <figcaption>Руслан и Людмила: Пер...</figcaption>
+                        </figure>
+
+                    </div>
+                </div>
+                <div class="foods" id="foods">
+                    <a>Скоро...</a>
+                </div>
+                <div class="my-kinopark" id="my-kinopark">
+                    <div class="my-kinopark__div1">
+                        <p style="font-weight: bold">Спец. предложения</p>
+                        <p>Беспредельный понедельник</p>
+                        <p>СуперВторник</p>
+                        <p>FunСреда</p>
+                        <p>Kinopark Collection</p>
+                        <p class="kinopass">Фильмы в <span style="font-weight: bold;">KinoPass</span></p>
+                    </div>
+                    <div class="my-kinopark__div2">
+                        <p style="font-weight: bold">Особые услуги</p>
+                        <p>Premium залы</p>
+                        <p>Пледы в кинозалах</p>
+                        <p>Для людей с ограниченными возможностями</p>
+                        <p style="font-weight: bold; margin-top: 35px;">Технологии</p>
+                        <p style="margin-top: 0px;"><span>IMAX</span><span>Dolby Atmos</span><span>Laser</span></p>
+                    </div>
+                    <div class="my-kinopark__div3">
+                        <p style="font-weight: bold">Часто задаваемые вопросы</p>
+                        <p>Покупка/возврат билетов</p>
+                        <p>Политика конфиденциальности</p>
+                        <div class="line2"></div>
+                        <p style="margin-top: 88px; font-size: 13px">Служба поддержки</p>
+                        <p style="font-size: 24px;">+7 (702) 000 6068</p>
+                    </div>
+                    <div class="my-kinopark__div4">
+                        <p style="font-weight: bold">О компании</p>
+                        <p>О нас</p>
+                        <p>Кинотеатры</p>
+                        <p>Для бизнеса</p>
+                        <p>Партнеры</p>
+                        <p>Новости</p>
+                        <p>Контакты</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </body>
+</html>
